@@ -1,0 +1,173 @@
+    1  exit
+    2  sudo yum -y groupinstall "development tools"
+    3  sudo yum -y install epel-release wget
+    4  sudo wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+    5  sudo rpm -Uvh remi-release-7.rpm
+    6  sudo yum -y install --enablerepo=remi-php72 php php-pdo php-mysqlnd php-mbstring php-xml php-fpm php-common php-devel php-mysql unzip
+    7  php -v
+    8  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    9  php composer-setup.php
+   10  php -r "unlink('composer-setup.php');"
+   11  sudo mv composer.phar /usr/local/bin/composer
+   12  composer -v
+   13  ls /
+   14  ls /usr
+   15  pwd
+   16  cd /vagrant
+   17  ls
+   18  exit
+   19  cd /vagrant
+   20  pwd
+   21  cd ./vagrant
+   22  cd /vagrant
+   23  vagrant plugin -list
+   24  exit
+   25  ls
+   26  cd /vagrant
+   27  ls
+   28  cd server_lesson/
+   29  ls 
+   30  ls linux_practice2/
+   31  git log
+   32  mv linux_practice2/documents/gizumo{20..40}.md linux_practice2/trash/
+   33  ls linux_practice2/trash/
+   34  ls linux_practice2/documents/
+   35  git add .
+   36  cd linux_practice
+   37  cd linux_practice2
+   38  git add .
+   39  git status
+   40  git add ./ -A
+   41  git status
+   42  ls
+   43  ls -a
+   44  rm .gitignore 
+   45  ls -a
+   46  git add ./ -A
+   47  git status
+   48  git commit -m "gizumo20~40.mdをlinux_practice2/trashへ移動" 
+   49  git status
+   50  touch .gitignore
+   51  ls
+   52  cat .gitignore 
+   53  ls -a
+   54  git add .
+   55  git status
+   56  git commit -m ".gitignoreファイルを作成"
+   57  git log origin/master..master
+   58  vi .gitignore 
+   59  git status --ignored
+   60  git status
+   61  vi .gitignore 
+   62  git status
+   63  git status --ignored
+   64  git add .
+   65  git status --ignored
+   66  vi .gitignore 
+   67  git status --ignored
+   68  git add .
+   69  git status --ignored
+   70  vi .gitignore 
+   71  git status --ignored
+   72  git add .
+   73  git status --ignored
+   74  ls
+   75  ls -a
+   76  vi .gitignore 
+   77  git status --ignored
+   78  git status
+   79  git add .
+   80  git status --ignored
+   81  git ls-files --other --ignored --exclude-standard
+   82  ls trash/
+   83  vi .gitignore 
+   84  git add .
+   85  git status --ignored
+   86  git log
+   87  git ls-files --other --ignored --exclude-standard
+   88  cd trash/
+   89  git ls-files --other --ignored --exclude-standard
+   90  git status --ignored
+   91  exit
+   92  git status --ignored
+   93  cd /vagrant/
+   94  ls
+   95  cd server_lesson/
+   96  cd /vagrant/
+   97  cd server_lesson/
+   98  git status --ignored
+   99  ls
+  100  cd linux_practice
+  101  cd linux_practice2
+  102  ls
+  103  ls -a
+  104  vi .gitignore 
+  105  git status --ignored
+  106  git ls-files --other --ignored --exclude-standard
+  107  vi .gitignore 
+  108  git ls-files --other --ignored --exclude-standard
+  109  git status --ignored
+  110  git status
+  111  git rm -r --cached .
+  112  vi .gitignore 
+  113  git add .
+  114  git commit -m ".gitignoreを作成"
+  115  git status
+  116  git status --ignored
+  117  git log
+  118  git reset --soft HEAD 50fb17697f2d2e650d5edaa8be31dcbbf7cee049
+  119  git reset --soft HEAD~{50fb17697f2d2e650d5edaa8be31dcbbf7cee049}
+  120  git commit --amend
+  121  git log
+  122  git reset --soft HEAD~{4} -- 
+  123  git reset --soft HEAD~{50fb17697f2d2e650d5edaa8be31dcbbf7cee049}
+  124  git reset --hard HEAD~{50fb17697f2d2e650d5edaa8be31dcbbf7cee049}
+  125  git reset --soft HEAD~{50fb17697f2d2e650d5edaa8be31dcbbf7cee049} -- documents/gizumo{01..50}.md
+  126  git reset --soft HEAD~{4} -- documents/gizumo{01..50}.md
+  127  git reset --soft 50fb17697f2d2e650d5edaa8be31dcbbf7cee049 -- documents/gizumo{01..50}.md
+  128  git reset --soft 50fb17697f2d2e650d5edaa8be31dcbbf7cee049 -- gizumo{01..50}.md
+  129  git reset --soft 50fb17697f2d2e650d5edaa8be31dcbbf7cee049 -- gizumo{20..40}.md
+  130  git reset --soft HEAD~{4} -- documents/gizumo{20..40}.md
+  131  git reset --soft HEAD^^^^ -- documents/gizumo{20..40}.md
+  132  git rm -r --cached .
+  133  git status --ignored
+  134  git ls-files --other --ignored --exclude-standard
+  135  git status
+  136  git add .
+  137  git status --ignored
+  138  git reset HEAD .gitignore
+  139  git reset HEAD documents/gizumo{01..19}.md
+  140  git reset HEAD documents/gizumo{41..50}.md
+  141  git status
+  142  git status --ignored
+  143  git status
+  144  git reset HEAD trash/gizumo{20..40}.md
+  145  git status
+  146  git ls-files --other --ignored --exclude-standard
+  147  ls -a
+  148  ls documents/
+  149  ls trash/
+  150  vi .gitignore 
+  151  git rm -r --cached .
+  152  git ls-files --other --ignored --exclude-standard
+  153  vi .gitignore 
+  154  git rm -r --cached .
+  155  git ls-files --other --ignored --exclude-standard
+  156  git add .
+  157  git 
+  158  git status
+  159  ls trash/
+  160  git commit -m ".gitignoreを再編集。及び適用"
+  161  ls trash/
+  162  git status --ignored
+  163  ls
+  164  git push origin master
+  165  exit
+  166  cd /vagrant/
+  167  ls
+  168  cd server_lesson/
+  169  ls
+  170  echo history 300 >> linux_practice2/exec_command.log
+  171  ls linux_practice2
+  172  cat linux_practice2/exec_command.log 
+  173  history 300 > linux_practice2/exec_command.log 
